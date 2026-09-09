@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曼陀庄园-自然生态庄园体验与品质生活指南</title>
+    <meta name="description" content="曼陀庄园是一处融合自然生态、休闲度假与品质生活的综合庄园，提供庄园环境介绍、特色体验项目、庄园生活方式、访问指南及常见问题解答，带您感受自然与人文相融的庄园魅力。">
+    <meta name="keywords" content="曼陀庄园,庄园,生态庄园,休闲度假,庄园体验,自然生活,庄园活动">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f7f4ef;
+            color: #3a3a3a;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .brand a {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #4a6741;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .brand .logo-icon {
+            font-size: 2rem;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+        }
+        .main-nav ul li a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #555;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .main-nav ul li a:hover {
+            color: #4a6741;
+            border-bottom-color: #4a6741;
+        }
+        .nav-toggle {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: #4a6741;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #e9f2e3 0%, #d4e8c9 50%, #c2dbb3 100%);
+            padding: 70px 0;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            color: #2d4a2a;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #4b5e4a;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary {
+            background-color: #4a6741;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(74,103,65,0.3);
+        }
+        .btn-primary:hover {
+            background-color: #3d5636;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(74,103,65,0.4);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: #3d5636;
+            border: 2px solid #4a6741;
+        }
+        .btn-outline:hover {
+            background-color: #4a6741;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Section general */
+        .section {
+            padding: 70px 0;
+        }
+        .section-alt {
+            background-color: #fff;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #2d4a2a;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #7a7a7a;
+            max-width: 600px;
+            margin: 0 auto 45px;
+            font-size: 1rem;
+        }
+
+        /* About / Intro */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .intro-image {
+            background: linear-gradient(145deg, #b8d4a8, #8fbb7d);
+            border-radius: 20px;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2d4a2a;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .intro-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.1);
+        }
+        .intro-text h2 {
+            font-size: 1.8rem;
+            color: #2d4a2a;
+            margin-bottom: 20px;
+            border-left: 4px solid #7fa86e;
+            padding-left: 18px;
+        }
+        .intro-text p {
+            margin-bottom: 16px;
+            color: #4a4a4a;
+            font-size: 1rem;
+        }
+
+        /* Feature cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .feature-card {
+            background: #f9f8f5;
+            border-radius: 16px;
+            padding: 30px 24px;
+            text-align: center;
+            border: 1px solid #e8e4da;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .feature-icon {
+            font-size: 2.6rem;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            color: #2d4a2a;
+            margin-bottom: 12px;
+        }
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #6b6b6b;
+        }
+
+        /* Experience list */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .experience-item {
+            display: flex;
+            gap: 20px;
+            background: #fafaf7;
+            border-radius: 14px;
+            padding: 24px;
+            border: 1px solid #eee9df;
+        }
+        .experience-num {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #7fa86e;
+            line-height: 1;
+            min-width: 60px;
+            text-align: center;
+        }
+        .experience-info h3 {
+            font-size: 1.1rem;
+            color: #2d4a2a;
+            margin-bottom: 8px;
+        }
+        .experience-info p {
+            color: #6b6b6b;
+            font-size: 0.95rem;
+        }
+
+        /* Lifestyle */
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .lifestyle-card {
+            background-color: #f4f1ea;
+            border-radius: 16px;
+            padding: 30px 24px;
+            border-bottom: 4px solid #7fa86e;
+            transition: all 0.2s;
+        }
+        .lifestyle-card:hover {
+            background-color: #fff;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+        .lifestyle-card h3 {
+            font-size: 1.2rem;
+            color: #2d4a2a;
+            margin-bottom: 14px;
+        }
+        .lifestyle-card p {
+            color: #6b6b6b;
+            font-size: 0.95rem;
+        }
+        .lifestyle-card .tag {
+            display: inline-block;
+            background-color: #7fa86e;
+            color: #fff;
+            border-radius: 20px;
+            padding: 2px 14px;
+            font-size: 0.8rem;
+            margin-top: 16px;
+        }
+
+        /* Visit guide */
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .visit-info h3 {
+            font-size: 1.4rem;
+            color: #2d4a2a;
+            margin-bottom: 20px;
+        }
+        .visit-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: #4a4a4a;
+        }
+        .visit-list li span:first-child {
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+        .visit-tips {
+            background-color: #eef4e8;
+            border-radius: 16px;
+            padding: 28px;
+        }
+        .visit-tips h3 {
+            font-size: 1.2rem;
+            color: #2d4a2a;
+            margin-bottom: 16px;
+        }
+        .visit-tips ul li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            display: flex;
+            gap: 8px;
+        }
+        .visit-tips ul li::before {
+            content: "🌿";
+            flex-shrink: 0;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background-color: #fafaf7;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            border: 1px solid #eee5da;
+        }
+        .faq-question {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #2d4a2a;
+            margin-bottom: 8px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .faq-question::before {
+            content: "Q";
+            background-color: #4a6741;
+            color: #fff;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .faq-answer {
+            color: #5a5a5a;
+            font-size: 0.95rem;
+            padding-left: 36px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2d3d2a;
+            color: #cfdcc7;
+            padding: 50px 0 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .footer-col ul li a:hover {
+            color: #b8d4a8;
+        }
+        .footer-bottom {
+            border-top: 1px solid #4a5a45;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #9aab92;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .features-grid,
+            .lifestyle-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .intro-grid,
+            .visit-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+                padding: 20px;
+            }
+            .main-nav.open {
+                display: block;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .hero {
+                padding: 50px 0;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .features-grid,
+            .lifestyle-grid {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 45px 0;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .intro-image {
+                height: 240px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .brand a {
+                font-size: 1.3rem;
+            }
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 260px;
+                text-align: center;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <a href="#"><span class="logo-icon">🌿</span>曼陀庄园</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="打开导航">☰</button>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="#about">庄园印象</a></li>
+                <li><a href="#features">特色体验</a></li>
+                <li><a href="#lifestyle">庄园生活</a></li>
+                <li><a href="#visit">访问指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>曼陀庄园 · 回归自然与本真</h1>
+            <p>在曼陀庄园，感受四季分明的田园风光，体验亲手采摘的乐趣，品味慢节奏的庄园生活方式。这里不仅是休憩之地，更是自然与人和谐相处的美好样本。</p>
+            <div class="btn-group">
+                <a href="#visit" class="btn btn-primary">预约庄园之行</a>
+                <a href="#features" class="btn btn-outline">了解特色体验</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 庄园印象 -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">走进曼陀庄园</h2>
+            <p class="section-subtitle">一处用心经营的自然生态庄园，让每一位来访者都能找到属于自己的宁静角落</p>
+            <div class="intro-grid">
+                <div class="intro-image">
+                    <span>🏡</span>
+                </div>
+                <div class="intro-text">
+                    <h2>自然与人文交织的庄园空间</h2>
+                    <p>曼陀庄园坐落于山水之间，占地面积广阔，园内种植着各类果树、花卉与有机蔬菜。庄园以生态种植为基础，坚持绿色、可持续的经营理念，让土地保持原有的生机与活力。</p>
+                    <p>漫步庄园，随处可见精心打理的花径、休憩凉亭与自然水系。这里既有田园的质朴，又不失现代生活的舒适便利。庄园内设有住宿区、餐厅、手工坊和活动草坪，适合家庭出游、朋友聚会或企业团建。</p>
+                    <p>庄园定期举办季节主题活动，例如春日赏花、夏夜观星、秋收采摘和冬日围炉，让每一位到访者都能在不同时节感受庄园的独特魅力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色体验 -->
+    <section class="section section-alt" id="features">
+        <div class="container">
+            <h2 class="section-title">庄园特色体验</h2>
+            <p class="section-subtitle">从土地到餐桌，从清晨到日暮，丰富的体验项目让庄园之旅充满惊喜</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍓</div>
+                    <h3>四季采摘</h3>
+                    <p>根据季节变化，庄园开放不同果蔬的采摘体验。草莓、樱桃、番茄、玉米……在自然成熟的果实中品尝最纯正的味道，感受收获的喜悦。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏕️</div>
+                    <h3>庄园露营</h3>
+                    <p>庄园设有专门的露营区域，提供帐篷租赁和露营设施。夜晚仰望星空，清晨在鸟鸣中醒来，享受与自然零距离的亲密接触。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍳</div>
+                    <h3>乡村厨房</h3>
+                    <p>在庄园的开放式厨房中，用当天采摘的新鲜食材制作一餐质朴的美味。无论是烘焙面包还是烹饪时蔬，都能体验到食物本真的乐趣。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>手作工坊</h3>
+                    <p>庄园开设各类手作课程，包括植物拓染、陶艺、编织等。在专业老师的指导下，亲手制作一份带着庄园记忆的纪念品。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐑</div>
+                    <h3>动物互动</h3>
+                    <p>庄园饲养了温顺的小动物，游客可以在安全区域内与它们互动、喂食。这里是孩子们亲近自然、了解动物习性的天然课堂。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚴</div>
+                    <h3>庄园骑行</h3>
+                    <p>沿着庄园规划的骑行路线，穿越果园、花田和林荫道。在骑行中慢慢欣赏庄园的每一处风景，感受微风拂面的惬意。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 庄园生活方式 -->
+    <section class="section" id="lifestyle">
+        <div class="container">
+            <h2 class="section-title">曼陀庄园的生活哲学</h2>
+            <p class="section-subtitle">在快节奏的时代里，庄园提供了一种值得被珍视的慢生活方式</p>
+            <div class="lifestyle-grid">
+                <div class="lifestyle-card">
+                    <h3>顺应自然的节奏</h3>
+                    <p>在庄园，时间不是被时钟定义的。日出而作、日落而息，跟随四季的流转安排农事与生活，让身心回归最自然的节律。</p>
+                    <span class="tag">自然节奏</span>
+                </div>
+                <div class="lifestyle-card">
+                    <h3>可持续的日常</h3>
+                    <p>庄园采用循环农业模式，厨余堆肥、雨水收集、太阳能利用……每一个细节都体现着对环境友好的态度，让可持续融入日常。</p>
+                    <span class="tag">绿色理念</span>
+                </div>
+                <div class="lifestyle-card">
+                    <h3>社区共享精神</h3>
+                    <p>庄园定期举办邻里市集、读书会与分享沙龙，让志同道合的人相聚于此，交流对生活、自然与食物的理解与热爱。</p>
+                    <span class="tag">社群共融</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <h2 class="section-title">庄园四季活动</h2>
+                <p class="section-subtitle">每个季节都有独特的风景与体验，曼陀庄园全年呈现不同的精彩</p>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="experience-num">春</div>
+                        <div class="experience-info">
+                            <h3>赏花与播种</h3>
+                            <p>春日庄园百花盛开，樱花、桃花、油菜花相继绽放。游客可以参与春播活动，在土地上种下希望的种子，也可以参加花艺课程，把春天带回家。</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-num">夏</div>
+                        <div class="experience-info">
+                            <h3>清凉与星空</h3>
+                            <p>夏季的庄园绿树成荫，溪水清凉。夜晚的观星活动是庄园的一大特色，远离城市光污染，在专业天文志愿者的带领下认识星座，聆听宇宙的故事。</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-num">秋</div>
+                        <div class="experience-info">
+                            <h3>丰收与酿造</h3>
+                            <p>秋天是庄园最丰盛的季节。果实挂满枝头，稻谷金黄。游客可参与秋收劳作，体验打谷、晒秋的传统农事，还能学习酿制果酒与果酱。</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-num">冬</div>
+                        <div class="experience-info">
+                            <h3>围炉与手作</h3>
+                            <p>冬季的庄园静谧温暖。在壁炉旁围坐，煮一壶热茶，参与室内手作课程。暖冬市集上，庄园自产的腊味、果干与手工艺品备受喜爱。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 访问指南 -->
+    <section class="section section-alt" id="visit">
+        <div class="container">
+            <h2 class="section-title">访问曼陀庄园</h2>
+            <p class="section-subtitle">提前了解来访信息，让庄园之旅更加顺畅愉快</p>
+            <div class="visit-grid">
+                <div class="visit-info">
+                    <h3>如何到达</h3>
+                    <ul class="visit-list">
+                        <li><span>🚗</span> 自驾：庄园位于城郊生态区，导航搜索"曼陀庄园"即可。庄园门口设有免费停车场，可容纳约80辆车。</li>
+                        <li><span>🚌</span> 公共交通：乘坐城郊巴士至"曼陀庄园站"下车，步行约500米即可到达庄园入口。</li>
+                        <li><span>📅</span> 开放时间：全年开放（特殊天气除外），每日 9:00 - 18:00，节假日正常开放。</li>
+                        <li><span>🎫</span> 入园方式：可提前通过庄园官方渠道预约，也可现场购票。建议周末及节假日提前预约。</li>
+                    </ul>
+                </div>
+                <div class="visit-tips">
+                    <h3>温馨提示</h3>
+                    <ul>
+                        <li>庄园内部分区域为生态保护区，请勿随意采摘或践踏。</li>
+                        <li>建议穿着舒适宽松的衣物与防滑平底鞋，便于在田间行走。</li>
+                        <li>夏季户外活动请注意防晒，并随身携带饮用水。</li>
+                        <li>庄园内设有母婴室与无障碍通道，方便各类游客使用。</li>
+                        <li>宠物友好区域仅限户外草坪，进入室内场馆需使用宠物推车或背包。</li>
+                        <li>如需取消预约，请提前一天在预约渠道操作，以便将名额留给其他游客。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <p class="section-subtitle">关于曼陀庄园，你可能想了解这些</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">庄园适合带小朋友前往吗？</div>
+                    <div class="faq-answer">非常适合。庄园设有儿童活动区、小动物互动区以及亲子手作课程，孩子们可以在安全的环境中亲近自然、动手实践。部分体验项目对儿童有年龄建议，可提前咨询工作人员。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">庄园内有餐饮服务吗？</div>
+                    <div class="faq-answer">庄园主餐厅提供以本地食材为主的时令菜肴，菜单随季节更新。此外，咖啡厅供应轻食与饮品，野餐区也可以自带食物。建议用餐前提前预约，尤其是节假日期间。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">是否可以在庄园过夜？</div>
+                    <div class="faq-answer">可以。庄园提供多种住宿选择，包括田园客房、木屋别墅和露营帐篷。不同房型满足不同需求，所有住宿区均配备基本卫浴设施。夜间还有丰富的活动，如篝火晚会和星空观测。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">庄园是否承接团队活动与婚礼？</div>
+                    <div class="faq-answer">是的。庄园拥有开阔的草坪与多功能厅，可承办企业团建、家庭聚会、小型音乐会以及户外婚礼等活动。如有需求，请提前联系庄园活动策划团队，定制专属方案。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">庄园内可以拍照吗？</div>
+                    <div class="faq-answer">当然可以。庄园的自然风光非常适合摄影爱好者。个人游客在公共区域内拍照无需额外申请，但商业拍摄或使用专业摄影设备（如三脚架、反光板等）需提前向庄园报备。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>曼陀庄园</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">一处融合自然生态、休闲度假与品质生活的综合庄园。我们相信，与自然和谐相处，是生活最美好的方式。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#about">庄园印象</a></li>
+                    <li><a href="#features">特色体验</a></li>
+                    <li><a href="#lifestyle">庄园生活</a></li>
+                    <li><a href="#visit">访问指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系信息</h4>
+                <ul>
+                    <li>📍 地址：城郊生态区 · 曼陀庄园</li>
+                    <li>📞 电话：+86 000-0000-0000</li>
+                    <li>📧 邮箱：hello@manduomanor.com</li>
+                    <li>🕘 开放时间：每日 9:00 - 18:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 曼陀庄园 · 保留所有权利 · 用心经营每一寸土地</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+        var nav = document.getElementById('mainNav');
+        nav.classList.toggle('open');
+    });
+</script>
+</body>
+                      </html>
