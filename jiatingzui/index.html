@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭最简单面包的做法-新手零失败家常面包制作指南</title>
+    <meta name="description" content="为家庭烘焙新手准备的最简单面包做法大全，涵盖无需厨师机、无需手套膜的基础配方，手把手教你用家常食材做出松软好吃的面包，附常见问题解答。">
+    <meta name="keywords" content="家庭最简单面包的做法, 家常面包, 新手面包, 简单面包配方, 不用厨师机面包, 面包怎么做">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #fcf9f3;
+            color: #3e362e;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #c47a3a;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: #8a5a2b;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #4a3f35;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .nav-links a:hover {
+            border-color: #c47a3a;
+            color: #c47a3a;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #fff7ed 0%, #fde8d4 100%);
+            padding: 50px 0;
+            border-bottom: 1px solid #f0dcc8;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1 1 500px;
+        }
+        .hero-text h1 {
+            font-size: 2.4rem;
+            line-height: 1.3;
+            color: #5a3e2b;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        .hero-text h1 em {
+            font-style: normal;
+            color: #c47a3a;
+        }
+        .hero-text p {
+            font-size: 1.15rem;
+            color: #6b5a4a;
+            margin-bottom: 20px;
+        }
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .hero-badge {
+            background: #c47a3a;
+            color: #fff;
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .hero-badge.secondary {
+            background: #e9d5c0;
+            color: #6b4a2e;
+        }
+        .hero-illustration {
+            flex: 1 1 280px;
+            text-align: center;
+        }
+        .hero-illustration .bread-icon {
+            font-size: 120px;
+            line-height: 1;
+            filter: drop-shadow(0 10px 20px rgba(194, 130, 70, 0.2));
+        }
+
+        /* Section styles */
+        .section {
+            padding: 50px 0;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #5a3e2b;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #8a7a6a;
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+        }
+
+        /* Card grids */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f1e4d6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            color: #4a3523;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #6f5e4e;
+            font-size: 0.98rem;
+        }
+
+        /* Steps / Recipe */
+        .recipe-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+            border: 1px solid #efe2d2;
+        }
+        .recipe-ingredients {
+            flex: 1 1 280px;
+            background: #faf3ea;
+            border-radius: 20px;
+            padding: 28px;
+            align-self: flex-start;
+        }
+        .recipe-steps {
+            flex: 2 1 500px;
+        }
+        .ingredient-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .ingredient-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #dccbb6;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+        .ingredient-list li:last-child {
+            border-bottom: none;
+        }
+        .step-list {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 25px;
+            padding-left: 50px;
+            position: relative;
+        }
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 36px;
+            height: 36px;
+            background: #c47a3a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .step-list li strong {
+            display: block;
+            font-size: 1.15rem;
+            color: #4a3523;
+            margin-bottom: 4px;
+        }
+        .step-list li p {
+            color: #6f5e4e;
+        }
+
+        /* Tips */
+        .tip-box {
+            background: #fbf6ed;
+            border-left: 5px solid #c47a3a;
+            padding: 18px 22px;
+            border-radius: 0 12px 12px 0;
+            margin: 25px 0;
+        }
+        .tip-box h4 {
+            color: #7a4a25;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .tip-box p {
+            color: #6b5a4a;
+        }
+
+        /* Comparison table */
+        .table-wrap {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        th {
+            background: #f7e8d9;
+            color: #5a3e2b;
+            padding: 14px 12px;
+            text-align: left;
+            font-weight: 700;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #f0e2d2;
+            color: #5f4e3e;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.02);
+            border: 1px solid #f0e4d6;
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            color: #4a3523;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .faq-item h3::before {
+            content: "Q";
+            background: #c47a3a;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .faq-item p {
+            color: #6b5a4a;
+            padding-left: 34px;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: #f7e8d9;
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-section h2 {
+            font-size: 1.8rem;
+            color: #5a3e2b;
+            margin-bottom: 12px;
+        }
+        .cta-section p {
+            color: #6b5a4a;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #2e2a25;
+            color: #c8bdb1;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: #e8dcd0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .footer-col a {
+            display: block;
+            color: #b3a89c;
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .footer-col a:hover {
+            color: #e0b48a;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #4a443c;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-meta {
+                justify-content: center;
+            }
+            .section {
+                padding: 35px 0;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .recipe-wrap {
+                padding: 25px;
+                flex-direction: column;
+            }
+            .recipe-ingredients {
+                width: 100%;
+            }
+            .nav-links {
+                gap: 15px;
+                margin-top: 10px;
+                flex-wrap: wrap;
+            }
+            .header-wrap {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        @media (max-width: 480px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .step-list li {
+                padding-left: 45px;
+            }
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-wrap">
+        <div class="logo">🍞 家庭<span>面包</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#basic">基础做法</a></li>
+                <li><a href="#steps">详细步骤</a></li>
+                <li><a href="#tips">技巧与窍门</a></li>
+                <li><a href="#compare">工具对比</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1><em>家庭最简单面包的做法</em> 新手也能一次成功</h1>
+                <p>不需要厨师机，不需要复杂的手套膜，只用家里常备的面粉、酵母、鸡蛋和牛奶，就能做出松软拉丝的日常面包。这篇指南为你整理了真正简化过的配方和步骤。</p>
+                <div class="hero-meta">
+                    <span class="hero-badge">🥖 零失败配方</span>
+                    <span class="hero-badge secondary">⏱️ 约2小时</span>
+                    <span class="hero-badge secondary">👨‍🍳 难度：简单</span>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="bread-icon">🥐</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 为什么这个做法最简单 -->
+    <section class="section" id="basic">
+        <div class="container">
+            <h2 class="section-title">为什么这是家庭最简单的面包做法</h2>
+            <p class="section-subtitle">专为家庭环境和新手条件设计，避开所有不必要的复杂环节</p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>食材常见</h3>
+                    <p>高筋面粉、酵母、糖、盐、鸡蛋、牛奶（或水）、食用油。这些在超市都能轻松买到，不需要特殊原料。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🖐️</div>
+                    <h3>无需厨师机</h3>
+                    <p>整个揉面过程用手完成，大约需要10-15分钟。不需要检查手套膜，揉到面团光滑有弹性即可。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🍞</div>
+                    <h3>发酵灵活</h3>
+                    <p>常温发酵或烤箱发酵都可以。没有发酵箱也没关系，只要面团发到两倍大，内部呈蜂窝状就成功了。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎛️</div>
+                    <h3>整形简单</h3>
+                    <p>不用编辫子、不用包馅料，把面团滚圆或者整成椭圆形放入烤盘，就是最基础也最好看的餐包。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 基础配方与详细步骤 -->
+    <section class="section" id="steps">
+        <div class="container">
+            <h2 class="section-title">基础白面包配方与做法</h2>
+            <p class="section-subtitle">以下配方可做6个中等大小的面包，适合家庭日常食用</p>
+            <div class="recipe-wrap">
+                <div class="recipe-ingredients">
+                    <h3 style="color:#5a3e2b; font-size:1.4rem;">🧾 材料清单</h3>
+                    <ul class="ingredient-list">
+                        <li><span>高筋面粉</span> <span>300克</span></li>
+                        <li><span>细砂糖</span> <span>35克</span></li>
+                        <li><span>盐</span> <span>3克</span></li>
+                        <li><span>耐高糖干酵母</span> <span>4克</span></li>
+                        <li><span>鸡蛋（室温）</span> <span>1个（约50克）</span></li>
+                        <li><span>纯牛奶（温热）</span> <span>150毫升</span></li>
+                        <li><span>无味植物油</span> <span>25克（或软化黄油）</span></li>
+                        <li><span>表面刷液：蛋黄</span> <span>1个 + 少许水</span></li>
+                    </ul>
+                    <div class="tip-box" style="margin-top:15px;">
+                        <h4>💡 替换小贴士</h4>
+                        <p>牛奶可以换成等量清水；植物油可以换成黄油，味道更香浓。</p>
+                    </div>
+                </div>
+                <div class="recipe-steps">
+                    <h3 style="color:#5a3e2b; font-size:1.4rem; margin-bottom:20px;">👩‍🍳 制作步骤</h3>
+                    <ol class="step-list">
+                        <li>
+                            <strong>混合干性材料</strong>
+                            <p>在一个大盆中，将高筋面粉、细砂糖、盐混合均匀。注意盐不要直接与酵母接触，避免影响发酵。</p>
+                        </li>
+                        <li>
+                            <strong>加入湿性材料</strong>
+                            <p>将干酵母撒入温牛奶中静置2分钟激活，然后倒入面粉盆中，加入鸡蛋和植物油。</p>
+                        </li>
+                        <li>
+                            <strong>揉面</strong>
+                            <p>用筷子搅拌成絮状后，用手揉成团。将面团转移到案板上，像搓衣服一样来回揉搓，约10-15分钟，直到面团表面变得光滑，不粘手且具有延展性。</p>
+                        </li>
+                        <li>
+                            <strong>第一次发酵</strong>
+                            <p>将面团滚圆，放入抹了油的盆中，盖上保鲜膜或湿布，在温暖处（约28℃-35℃）发酵至2倍大，大约需要1小时。用手指沾面粉戳洞，洞口不回缩即发酵完成。</p>
+                        </li>
+                        <li>
+                            <strong>排气与分割</strong>
+                            <p>取出面团轻拍排气，平均分割成6份（每份约85克），滚圆后盖上保鲜膜松弛10分钟。</p>
+                        </li>
+                        <li>
+                            <strong>整形</strong>
+                            <p>取一个小面团，再次排气滚圆，收口朝下放入垫有油纸的烤盘中。也可以整形成橄榄形或圆形。</p>
+                        </li>
+                        <li>
+                            <strong>第二次发酵</strong>
+                            <p>将整形好的面团放在温暖处进行二次发酵，约40-50分钟，面团明显变大，手指轻按缓慢回弹。</p>
+                        </li>
+                        <li>
+                            <strong>刷蛋液与烘烤</strong>
+                            <p>烤箱预热至180℃。在发酵好的面团表面轻轻刷一层蛋水液（蛋黄加少许水），放入烤箱中下层，烤18-22分钟，至表面金黄即可。</p>
+                        </li>
+                    </ol>
+                    <div class="tip-box">
+                        <h4>🔥 烘烤提示</h4>
+                        <p>如果表面上色太快，可以在最后5分钟加盖锡纸。烤好的面包立即出炉，在晾网上散热。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功技巧 -->
+    <section class="section" id="tips">
+        <div class="container">
+            <h2 class="section-title">让家庭面包更松软的几个技巧</h2>
+            <p class="section-subtitle">不需要专业设备，掌握这几点就能明显提升面包品质</p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🌡️</div>
+                    <h3>控制液体温度</h3>
+                    <p>夏天用常温水或冰牛奶，冬天用温牛奶（不超过35℃）。过热会杀死酵母，过冷会延长发酵时间。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⏳</div>
+                    <h3>揉面要充分</h3>
+                    <p>手工揉面时间不够会导致面包发硬。即使没有手套膜，也要揉到面团表面完全光滑，拉开时有较厚的膜且不易破。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>注意面团湿度</h3>
+                    <p>不同面粉吸水性不同，可以预留15毫升牛奶，边揉边加。面团偏软一点，面包成品更松软。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🍯</div>
+                    <h3>添加一点油脂</h3>
+                    <p>配方中的油或黄油能包裹面筋，让面包组织更细腻。不要省略，否则口感会偏干硬。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工具对比 -->
+    <section class="section" id="compare">
+        <div class="container">
+            <h2 class="section-title">家庭做面包：工具与方式对比</h2>
+            <p class="section-subtitle">了解不同工具对结果的影响，选择最适合你家的方案</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>方式</th>
+                            <th>所需时间</th>
+                            <th>体力消耗</th>
+                            <th>成品效果</th>
+                            <th>适合人群</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>纯手工揉面</td>
+                            <td>揉面10-15分钟</td>
+                            <td>中等</td>
+                            <td>良好（组织均匀）</td>
+                            <td>偶尔做一两次的家庭</td>
+                        </tr>
+                        <tr>
+                            <td>厨师机揉面</td>
+                            <td>揉面8-10分钟</td>
+                            <td>低</td>
+                            <td>优秀（更易出膜）</td>
+                            <td>经常做面包的家庭</td>
+                        </tr>
+                        <tr>
+                            <td>面包机一键式</td>
+                            <td>全程约3小时</td>
+                            <td>极低</td>
+                            <td>一般（皮较厚）</td>
+                            <td>追求便捷的用户</td>
+                        </tr>
+                        <tr>
+                            <td>水合法（静置）</td>
+                            <td>静置30分钟+揉面5分钟</td>
+                            <td>极低</td>
+                            <td>优秀</td>
+                            <td>想省力的新手</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">家庭做面包常见问题解答</h2>
+            <p class="section-subtitle">针对新手最容易遇到的情况，这里准备了明确的解决方案</p>
+            
+            <div class="faq-item">
+                <h3>面包烤出来很硬，不松软怎么办？</h3>
+                <p>主要原因可能是揉面不够或者发酵过度。确保第一次发酵到位但不过度（用手指戳洞不回缩也不塌陷），烘烤时间不要过长，出炉后及时密封保存。</p>
+            </div>
+            <div class="faq-item">
+                <h3>面团总是粘手，无法成型？</h3>
+                <p>不要急着加干粉。可以手上抹一点油再操作。如果面团实在过软，可以少量加入面粉，每次加一小勺。另外，揉面时间不够也会导致粘手，继续揉到光滑会改善。</p>
+            </div>
+            <div class="faq-item">
+                <h3>没有高筋面粉，用普通中筋面粉可以吗？</h3>
+                <p>可以，但面包的筋度和蓬松度会略差。建议将中筋面粉中的20克替换为玉米淀粉，降低面筋含量，效果更接近低筋。如果追求更软的口感，可以尝试添加少许谷朊粉。</p>
+            </div>
+            <div class="faq-item">
+                <h3>酵母失效了怎么判断？</h3>
+                <p>用30℃左右的温水加少量糖，放入酵母静置5-10分钟，如果表面没有丰富泡沫或没有明显活跃反应，说明酵母活性不足，建议更换新酵母。开封后酵母要密封冷藏保存。</p>
+            </div>
+            <div class="faq-item">
+                <h3>家里没有烤箱，能用空气炸锅吗？</h3>
+                <p>可以。空气炸锅容量较小，建议将配方减半。温度设为160℃-170℃，时间约15-18分钟，中途观察上色情况。由于空气炸锅热风循环快，注意表面别烤焦。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 小建议 -->
+    <div class="container">
+        <div class="cta-section">
+            <h2>从今天开始，为家人烤一炉温暖的面包</h2>
+            <p>这份家庭最简单面包的做法，不需要高超的技巧，只需要一点耐心。当你看到面团在烤箱里慢慢膨胀、表面变成金黄色的瞬间，那种成就感是任何外卖都比不上的。</p>
+            <p style="font-weight:600; color:#7a4a25;">建议先按原配方做一次基础款，成功后再尝试添加葡萄干、坚果或椰蓉，变化出更多口味。</p>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>🍞 家庭面包指南</h4>
+                <p style="max-width:260px;">专注分享家庭烘焙的简单方法，让每个人都能用最基础的食材做出安心的美味。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <a href="#basic">基础配方</a>
+                <a href="#steps">详细做法</a>
+                <a href="#tips">技巧提升</a>
+                <a href="#faq">常见问题</a>
+            </div>
+            <div class="footer-col">
+                <h4>烘焙小贴士</h4>
+                <p style="max-width:240px;">所有配方均为家庭实践总结，不收取任何费用。欢迎收藏与分享。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 家庭面包做法指南 · 用简单的方法，烘焙日常的幸福</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
